@@ -20,12 +20,7 @@ import { AuthService } from '../services/auth.service';
 
 
 export const firebaseConfig = {
-  apiKey: "AIzaSyBEfIKpVVKjNGtAxDZ_AIUCl_-imGSrbWQ",
-  authDomain: "testing-6af56.firebaseapp.com",
-  databaseURL: "https://testing-6af56.firebaseio.com",
-  projectId: "testing-6af56",
-  storageBucket: "testing-6af56.appspot.com",
-  messagingSenderId: "446169302811"
+
 }
 
 @NgModule({
