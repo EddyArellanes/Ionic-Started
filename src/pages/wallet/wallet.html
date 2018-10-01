@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>wallet</ion-title>
+    <ion-title>Wallet</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -15,4 +15,23 @@
 
 <ion-content padding>
   
+  <button ion-button outline (click)="navigateBack()">Volver</button>
+
+  <ion-item>
+    <ion-label floating>Nombre de Wallet</ion-label>
+    <ion-input type="text" [(ngModel)] ="wallet.name"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Descripción</ion-label>
+    <ion-textarea [(ngModel)] ="wallet.description"></ion-textarea>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Precio</ion-label>
+    <ion-input type="number" [(ngModel)] ="wallet.price"></ion-input>
+  </ion-item>
+  
+  <button padding-top ion-button full (click)="saveWallet()">Guardar</button>
+
 </ion-content>

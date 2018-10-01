@@ -3,6 +3,7 @@ import { Injectable } from "@angular/core";
 
 //Injectable allows to Inser this script into any Component or aka Page
 @Injectable()
+
 export class WalletsService{
   constructor(public afDB: AngularFireDatabase){
 

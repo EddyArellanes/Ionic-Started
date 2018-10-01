@@ -1,21 +1,27 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      Ionic Started
+    <ion-title text-capitalized>
+      Ay My Wallet
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <button ion-button outline (click)="goToWallets()">Ver tus Wallets</button>
+  <!--<button ion-button outline (click)="goToWallets()">Ver tus Wallets</button>-->
   <ion-list>
-    <ion-item *ngFor="let wallet of wallets" (click)="details()">    
-      <h2>{{wallet.name}}</h2>
-      <h3>{{wallet.description}}</h3>
-      <p>{{wallet.price}}</p>
-    </ion-item>
+    <ion-item-sliding *ngFor="let wallet of wallets">      
+      <ion-item (click)="details(wallet)">
+        <h2 text-capitalized>{{wallet.name}}</h2>
+        <h3 text-capitalized text-wrap>{{wallet.description}}</h3>
+        <p>{{wallet.price}}</p>            
+      </ion-item> 
+      <ion-item-options>
+        <button color="danger" ion-button expandable (click)="deleteWallet(wallet)"><ion-icon name="trash"></ion-icon>Borrar</button>
+      </ion-item-options>
+    </ion-item-sliding>
   </ion-list>
-  <ion-fab right edge>
-    <button ion-fab (click)="create()"><ion-icon name="add"></ion-icon></button>    
+ 
+  <ion-fab right bottom>
+    <button ion-fab mini (click)="create()"><ion-icon name="add"></ion-icon></button>    
   </ion-fab>
 </ion-content>
